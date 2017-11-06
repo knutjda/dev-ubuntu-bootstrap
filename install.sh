@@ -2,10 +2,11 @@
 
 sudo apt-get update
 sudo apt-get upgrade -y
+sudo apt-get --auto-remove --yes remove python-openssl
 sudo apt-get install git python-pip -y
 export LC_ALL=C
-sudo pip install pyOpenSSL==17.3.0
-sudo pip install ansible==2.3.2.0
+sudo pip install pyOpenSSL
+sudo pip install ansible
 
 mkdir -p $HOME/programming
 cd $HOME/programming
