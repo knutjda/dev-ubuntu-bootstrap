@@ -26,5 +26,7 @@ Vagrant.configure("2") do |config|
       # Disable default limit to connect to all the machines
       ansible.limit = "all"
       ansible.playbook = "setup.yml"
+      # Trick to run ansible playbook on virtualbox guest machine, and not on the host.
+      ansible.extra_vars = "run_on_hosts=all"
   end
 end

@@ -1,10 +1,10 @@
 ---
-- include: common_packages.yml
+- include_task: common_packages.yml
 # - include: proxy_certificate.yml
-- include: docker.yml
-- include: gradle.yml
-- include: idea.yml
-- include: maven.yml
+- include_task: docker.yml
+- include_task: gradle.yml
+- include_task: idea.yml
+- include_task: maven.yml
 # - include: atom.yml
 # - include: node / npm / kotlin
 # - include: chrome

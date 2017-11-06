@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: "{{ run_on_hosts | default('localhost') }}"
   become: yes
   roles:
     - common
