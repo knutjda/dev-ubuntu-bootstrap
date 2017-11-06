@@ -13,9 +13,9 @@ Vagrant.configure("2") do |config|
     v.cpus = 2
   end
 
-  config.hostmanager.enabled = true
-  config.hostmanager.manage_host = true
-  config.hostmanager.manage_guest = true
+#  config.hostmanager.enabled = true
+#  config.hostmanager.manage_host = true
+#  config.hostmanager.manage_guest = true
 
   config.vm.hostname = "devmachine"
   config.vm.network "private_network", ip: "192.168.0.44", netmask: "255.255.0.0"

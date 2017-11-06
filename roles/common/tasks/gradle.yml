@@ -1,1 +1,19 @@
 ---
+- name: Creates directory for gradle
+  file:
+    path: /opt/gradle
+    state: directory
+    mode: 0755
+
+- name: Download and unarchive Gradle
+  unarchive:
+    src: https://services.gradle.org/distributions/gradle-4.3-bin.zip
+    dest: /opt/gradle
+    remote_src: yes
+    creates: /opt/gradle/gradle-4.3/bin/gradle
+
+- name: Add Gradle to PATH globally for all users
+  template:
+    src: gradle.sh.j2
+    dest: /etc/profile.d/gradle.sh
+    mode: 0644

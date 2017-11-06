@@ -1,6 +1,10 @@
 ---
 - include: common_packages.yml
+# - include: proxy_certificate.yml
 - include: docker.yml
 - include: gradle.yml
 - include: idea.yml
 - include: maven.yml
+# - include: atom.yml
+# - include: node / npm / kotlin
+# - include: chrome

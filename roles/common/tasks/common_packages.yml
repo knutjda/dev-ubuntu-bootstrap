@@ -5,3 +5,7 @@
    - terminator
    - openjdk-8-jdk
    - git
+   - unzip
+   - htop
+   - wget
+   - tree
