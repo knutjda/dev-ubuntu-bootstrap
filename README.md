@@ -18,10 +18,18 @@ Følgende programvare installeres og konfigureres
 
 ### Første gangs installasjon
 
+Åpne et terminal vindu og kjør følgende kommando:
+```
+wget https://raw.githubusercontent.com/knutjda/dev-ubuntu-bootstrap/master/install.sh -O - | bash
+
+```
 
 
 ### Oppgradering av eksisterende oppsett
-Bla bla
+
+Åpne et terminal vindu og kjør følgende kommandoer:
 ```
+$ cd $HOME/programming/dev-ubuntu-bootstrap
+$ git pull
 $ ansible-playbook setup.yml
 ```
