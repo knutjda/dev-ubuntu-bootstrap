@@ -1,0 +1,6 @@
+---
+- include: common_packages.yml
+- include: docker.yml
+- include: gradle.yml
+- include: idea.yml
+- include: maven.yml

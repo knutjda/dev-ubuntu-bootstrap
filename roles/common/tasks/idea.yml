@@ -1,0 +1,25 @@
+---
+#- name: Download file with check (md5)
+#  get_url:
+#    url: https://download.jetbrains.com/idea/ideaIU-2017.2.5.tar.gz
+#    dest: /tmp/ideaIU-2017.2.5.tar.gz
+#    checksum: sha256:a08ff0adfad2e8008d42e92d09696e43a70566b544db6c6f872e5b4d20436d2c
+
+- name: Creates directory for idea
+  file:
+    path: /opt/jetbrains
+    state: directory
+    mode: 0755
+
+- name: Download and unarchive IntelliJ
+  unarchive:
+    src: https://download.jetbrains.com/idea/ideaIU-2017.2.5.tar.gz
+    dest: /opt/jetbrains
+    remote_src: yes
+    creates: /opt/jetbrains/idea-IU-172.4343.14/bin/idea.sh
+
+- name: Add IntelliJ to PATH globally for all users
+  template:
+    src: idea.sh.j2
+    dest: /etc/profile.d/idea.sh
+    mode: 0644
