@@ -69,4 +69,12 @@ Deretter kan en logge inn på den virtuelle maskinen med følgende kommando:
 vagrant ssh
 ```
 
-Så kan en kjøre kommandoen for "Første gangs installasjon" beskrevet lengere opp på siden. Merk at dette ikke vil teste evnt lokale endringer. 
+Så kan en kjøre kommandoen for "Første gangs installasjon" beskrevet lengere opp på siden. Merk at dette ikke vil teste evnt lokale endringer.
+
+
+## TODO
+Oppgaver som bør løses
+
+* Fjerne Vagrant og heller bruker docker for testing. 
+* Konfigurasjon av ca-certificate for http proxy
+* Oppsett av ssh-nøkler hvis det ikke eksisterer for brukeren (ssh-keygen -t rsa -b 4096 -C "your_email@example.com")  
