@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-sudo apt-get install git python-pip
+sudo apt-get install git python-pip -y
 sudo pip install ansible
 
 mkdir $HOME/programming
