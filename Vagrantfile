@@ -13,10 +13,6 @@ Vagrant.configure("2") do |config|
     v.cpus = 2
   end
 
-#  config.hostmanager.enabled = true
-#  config.hostmanager.manage_host = true
-#  config.hostmanager.manage_guest = true
-
   config.vm.hostname = "devmachine"
   config.vm.network "private_network", ip: "192.168.0.44", netmask: "255.255.0.0"
 
@@ -27,6 +23,8 @@ Vagrant.configure("2") do |config|
       ansible.limit = "all"
       ansible.playbook = "setup.yml"
       # Trick to run ansible playbook on virtualbox guest machine, and not on the host.
-      ansible.extra_vars = "run_on_hosts=all"
+      ansible.extra_vars = {
+        run_on_hosts: "all"
+      }
   end
 end
