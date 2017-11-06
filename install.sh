@@ -2,11 +2,12 @@
 
 sudo apt-get update
 sudo apt-get install git python-pip -y
+export LC_ALL=C
 sudo pip install ansible
 
-mkdir $HOME/programming
+mkdir -p $HOME/programming
 cd $HOME/programming
 git clone https://github.com/knutjda/dev-ubuntu-bootstrap.git
-cd $HOME/programming/ubuntu-dev-bootstrap
+cd $HOME/programming/dev-ubuntu-bootstrap
 
 ansible-playbook setup.yml
