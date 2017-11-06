@@ -3,7 +3,7 @@
 sudo apt-get update
 sudo apt-get install git python-pip -y
 export LC_ALL=C
-sudo pip install --upgrade ansible
+sudo pip install ansible==2.3.2.0
 
 mkdir -p $HOME/programming
 cd $HOME/programming
